@@ -8,21 +8,12 @@ import Splitting from "splitting";
 const Link = ({ href, children, className }) => {
   const router = useRouter();
 
-  useEffect(() => {
-    window.onbeforeunload = function () {
-      sessionStorage.clear();
-      Splitting();
-    };
-  }, []);
-
   return (
     <NextLink
       href={href}
       className={className}
       onClick={(e) => {
         e.preventDefault();
-        sessionStorage.setItem("isSession", "true");
-        sessionStorage.setItem("preloader", "true");
 
         const transitionTl = gsap.timeline();
 

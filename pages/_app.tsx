@@ -3,12 +3,11 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 
 import dynamic from "next/dynamic";
+import "../styles/index.scss";
 
-const Layout = dynamic(() => import("@/shared/Layout"), { ssr: false });
+const Layout = dynamic(() => import("@/Layout"), { ssr: false });
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // const [linkText, setLinkText] = useState("");
-
   return (
     <>
       <Head>
@@ -20,11 +19,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           name="description"
-          content="Empowering the planet with the latest in computer technology"
+          content="Kelvin Ochubili - Frontend Developer"
         />
         <meta name="keywords" content="Keywords" />
 
-        <title>Bitpiler</title>
+        <title>Kelvin Ochubili - Frontend Developer</title>
       </Head>
       <Layout>
         <Component {...pageProps} />

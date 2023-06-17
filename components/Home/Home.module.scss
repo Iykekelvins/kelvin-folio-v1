@@ -1,0 +1,23 @@
+@import "../../styles/base/mixins.scss";
+@import "../../styles/base/utils.scss";
+
+.home {
+  @extend .flex-ac-jc;
+  min-height: 100vh;
+  &_bg {
+    position: fixed;
+    z-index: -1;
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 40px;
+  }
+  h1 {
+    font-size: 7rem;
+    font-family: "Almarai", sans-serif;
+    text-align: center;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+}

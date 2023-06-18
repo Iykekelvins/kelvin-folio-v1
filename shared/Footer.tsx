@@ -87,7 +87,7 @@ const Footer = () => {
     displayAbtTl.to('[ data-selector="about"]', {
       y: "90%",
       ease: "power3",
-      duration: 1,
+      duration: 0.5,
     });
     displayAbtTl.play();
   };
@@ -115,7 +115,7 @@ const Footer = () => {
             onMouseOver={(e) => hoverLink(e)}
             onMouseOut={(e) => hoverLinkOut(e)}
           >
-            Pojects
+            Projects
             <div></div>
           </Link>
         </div>

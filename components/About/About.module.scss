@@ -21,6 +21,8 @@
   // }
   @include respondMax("tablet3x") {
     padding-top: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   &_hero {
     @extend .flex-ac-jc;
@@ -73,6 +75,10 @@
       flex-direction: column;
       gap: 4.5rem;
     }
+    @media (max-width: 360px) {
+      gap: 2.5rem;
+      margin-top: 5rem;
+    }
     &_left {
       p {
         font-size: 2rem;
@@ -100,7 +106,7 @@
           font-family: "Switzer", sans-serif;
           font-size: 0.875rem;
           text-transform: uppercase;
-          margin-bottom: 2.5rem;
+          margin-bottom: 1.5rem;
         }
         a {
           color: inherit;

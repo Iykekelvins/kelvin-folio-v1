@@ -9,11 +9,13 @@ import c from "../Layout/Layout.module.scss";
 
 const Footer = () => {
   const router = useRouter();
-  const [clicked, setClicked] = useState(false);
+
+  const displayAbtTl = gsap.timeline();
 
   const openAbt = () => {
     const aboutTl = gsap.timeline();
-    setClicked(true);
+    displayAbtTl.clear();
+
     aboutTl
       .to('[ data-selector="about"]', {
         y: 0,
@@ -39,11 +41,16 @@ const Footer = () => {
           duration: 1,
         },
         "-=1.2"
-      );
+      )
+      .to('[data-selector="footer-one"] button', {
+        pointerEvents: "none",
+      }),
+      "-=2";
   };
 
   const closeAbt = () => {
     const aboutTl = gsap.timeline();
+    // aboutTl.reverse();
     aboutTl
       .to('[data-selector="footer-one"]', {
         rotateX: 0,
@@ -58,7 +65,7 @@ const Footer = () => {
           zIndex: 3,
           duration: 1,
         },
-        "-=1"
+        "-=1.1"
       )
       .to(
         '[ data-selector="about"]',
@@ -68,12 +75,15 @@ const Footer = () => {
           duration: 1,
         },
         "-=1.2"
-      );
+      )
+      .to('[data-selector="footer-one"] button', {
+        pointerEvents: "all",
+      });
   };
 
-  const displayAbtTl = gsap.timeline();
-
   const hoverInAbt = () => {
+    window.scrollTo(0, 0);
+
     displayAbtTl.to('[ data-selector="about"]', {
       y: "90%",
       ease: "power3",
@@ -94,7 +104,7 @@ const Footer = () => {
             }}
             onMouseOut={(e) => {
               hoverLinkOut(e);
-              // displayAbtTl.reverse();
+              displayAbtTl.reverse();
             }}
           >
             About

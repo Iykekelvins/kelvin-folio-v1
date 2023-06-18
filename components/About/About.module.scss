@@ -42,17 +42,18 @@
       p {
         font-size: 2rem;
         line-height: 48px;
-        max-width: 38.5rem;
+        // max-width: 38.5rem;
         &:last-child {
           font-size: 0.875rem;
           line-height: 20px;
+          margin-top: 1rem;
         }
       }
     }
     &_right {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 130px;
+      gap: 120px;
       margin-top: 1.25rem;
       .section {
         h4 {

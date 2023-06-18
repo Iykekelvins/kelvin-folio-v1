@@ -1,24 +1,35 @@
 import { useRouter } from "next/router";
-import c from "../Layout/Layout.module.scss";
-import Link from "next/link";
+import { hoverLink, hoverLinkOut } from "@/animations";
 import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+import Link from "next/link";
+
+import c from "../Layout/Layout.module.scss";
 
 const Footer = () => {
   const router = useRouter();
-
-  const footerOneRef = useRef(null);
+  const [clicked, setClicked] = useState(false);
 
   const openAbt = () => {
     const aboutTl = gsap.timeline();
-
+    setClicked(true);
     aboutTl
-      .to(footerOneRef.current, {
-        rotateX: "-180deg",
+      .to('[ data-selector="about"]', {
+        y: 0,
         ease: "power3",
         duration: 1,
-        pointerEvents: "none",
       })
+      .to(
+        '[data-selector="footer-one"]',
+        {
+          rotateX: "-180deg",
+          ease: "power3",
+          duration: 1,
+          pointerEvents: "none",
+        },
+        "-=1"
+      )
 
       .to(
         '[data-selector="footer-two"]',
@@ -33,7 +44,7 @@ const Footer = () => {
   const closeAbt = () => {
     const aboutTl = gsap.timeline();
     aboutTl
-      .to(footerOneRef.current, {
+      .to('[data-selector="footer-one"]', {
         rotateX: 0,
         ease: "power3",
         duration: 1,
@@ -46,19 +57,55 @@ const Footer = () => {
           zIndex: 3,
         },
         "-=1"
+      )
+      .to(
+        '[ data-selector="about"]',
+        {
+          y: "100%",
+          ease: "power3",
+          duration: 1,
+        },
+        "-=1"
       );
+  };
+
+  const displayAbtTl = gsap.timeline();
+
+  const hoverInAbt = () => {
+    displayAbtTl.to('[ data-selector="about"]', {
+      y: "90%",
+      ease: "power3",
+      duration: 1,
+    });
+    displayAbtTl.play();
   };
 
   return (
     <>
-      <footer
-        className={c.footer}
-        data-selector="footer-one"
-        ref={footerOneRef}
-      >
+      <footer className={c.footer} data-selector="footer-one">
         <div className={c.footer_inner}>
-          <button onClick={() => openAbt()}>About</button>
-          <Link href="/projects">Pojects</Link>
+          <button
+            onClick={() => openAbt()}
+            onMouseOver={(e) => {
+              hoverLink(e);
+              hoverInAbt();
+            }}
+            onMouseOut={(e) => {
+              hoverLinkOut(e);
+              displayAbtTl.reverse();
+            }}
+          >
+            About
+            <div></div>
+          </button>
+          <Link
+            href="/projects"
+            onMouseOver={(e) => hoverLink(e)}
+            onMouseOut={(e) => hoverLinkOut(e)}
+          >
+            Pojects
+            <div></div>
+          </Link>
         </div>
       </footer>
       <footer

@@ -4,7 +4,7 @@ import c from "../Layout/Layout.module.scss";
 const Navbar = () => {
   return (
     <nav className={c.navbar}>
-      <Link href="/">KelOch</Link>
+      <Link href="/">jardani</Link>
       <div className={c.navbar_right}>
         <a href="">Email</a>
         <span>— </span>

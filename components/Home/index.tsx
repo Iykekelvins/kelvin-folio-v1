@@ -1,7 +1,7 @@
 import Image from "next/image";
+import Navbar from "@/shared/Navbar";
 
 import c from "./Home.module.scss";
-import Navbar from "@/shared/Navbar";
 
 const Home = () => {
   return (

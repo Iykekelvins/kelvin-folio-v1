@@ -1,0 +1,99 @@
+@import "../../styles/base/mixins.scss";
+@import "../../styles/base/utils.scss";
+
+.about {
+  background: #2e2e2e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  padding: 2.5rem;
+  transform: translateY(100%);
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #f3f3f3;
+    border-radius: 8px;
+  }
+  &_hero {
+    @extend .flex-ac-jc;
+    flex-direction: column;
+    height: 70vh;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 60vw;
+    }
+    h2 {
+      font-family: "Neue Haas Grotesk Display Pro";
+      margin-top: -4rem;
+    }
+  }
+  &_info {
+    margin-top: 9rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+    &_left {
+      p {
+        font-size: 2rem;
+        line-height: 48px;
+        max-width: 38.5rem;
+        &:last-child {
+          font-size: 0.875rem;
+          line-height: 20px;
+        }
+      }
+    }
+    &_right {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 130px;
+      margin-top: 1.25rem;
+      .section {
+        h4 {
+          font-weight: 400;
+          font-family: "Switzer", sans-serif;
+          font-size: 0.875rem;
+          text-transform: uppercase;
+          margin-bottom: 2.5rem;
+        }
+        a {
+          color: inherit;
+          position: relative;
+          div {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #f3f3f3;
+          }
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          li {
+            white-space: nowrap;
+            font-weight: 400;
+            font-family: "Space Mono", sans-serif;
+            font-size: 0.75rem;
+          }
+          &.exp {
+            display: flex;
+            gap: 1rem;
+            span {
+              display: block;
+              margin-bottom: 0.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

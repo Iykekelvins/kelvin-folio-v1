@@ -1,10 +1,11 @@
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 
 import Footer from "@/shared/Footer";
+import About from "@/components/About";
 
 const Layout = ({ children }) => {
   const router = useRouter();
+
   // page transition on navigation buttons click event
   // useEffect(() => {
   //   router.beforePopState((event) => {
@@ -25,6 +26,7 @@ const Layout = ({ children }) => {
   return (
     <main>
       {children}
+      <About />
       <Footer />
     </main>
   );

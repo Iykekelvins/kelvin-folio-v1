@@ -20,4 +20,20 @@
     text-transform: uppercase;
     font-weight: 400;
   }
+  @include respondMax("mobile2x") {
+    h1 {
+      font-size: 5.5rem;
+      line-height: 1.2;
+    }
+    &_bg {
+      height: 100%;
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+  @media (max-width: 360px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
 }

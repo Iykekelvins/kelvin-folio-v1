@@ -65,14 +65,15 @@
   position: fixed;
   bottom: 3rem;
   left: 50%;
-  transform: translate(-70px, 0);
+  transform: translate(-50%, 0);
   background: linear-gradient(rgba(253, 51, 106, 1), rgba(198, 152, 255, 1));
   width: 12rem;
-  height: 47px;
+  height: 3rem;
   border-radius: 60px;
   z-index: 4;
+  overflow: hidden;
   &.footer_two {
-    transform: translate(-70px, 0) rotateX(180deg);
+    transform: translate(-50%, 0) rotateX(180deg);
     cursor: pointer;
     z-index: 3;
     button {
@@ -99,6 +100,9 @@
     &:hover {
       color: #fff;
     }
+    &.active {
+      color: #fff;
+    }
   }
   &_inner {
     @extend .flex-ac-jc;
@@ -108,17 +112,5 @@
     position: absolute;
     height: 94%;
     width: 98%;
-  }
-  @include respondMax("mobile2x") {
-    transform: translate(-50px, 0);
-    &.footer_two {
-      transform: translate(-50px, 0);
-    }
-  }
-  @media (max-width: 360px) {
-    transform: translate(-70px, 0);
-    &.footer_two {
-      transform: translate(-70px, 0);
-    }
   }
 }

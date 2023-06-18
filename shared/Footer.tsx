@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { hoverLink, hoverLinkOut } from "@/animations";
 import { gsap } from "gsap";
-import { useEffect, useRef, useState } from "react";
 
 import Link from "next/link";
 
@@ -29,6 +28,7 @@ const Footer = () => {
           ease: "power3",
           duration: 1,
           pointerEvents: "none",
+          width: "8rem",
         },
         "-=1"
       )
@@ -39,6 +39,7 @@ const Footer = () => {
           rotateX: 0,
           zIndex: 4,
           duration: 1,
+          width: "8rem",
         },
         "-=1.2"
       )
@@ -49,36 +50,80 @@ const Footer = () => {
   };
 
   const closeAbt = () => {
-    const aboutTl = gsap.timeline();
-    // aboutTl.reverse();
-    aboutTl
-      .to('[data-selector="footer-one"]', {
-        rotateX: 0,
-        ease: "power3",
-        duration: 1,
-        pointerEvents: "all",
-      })
-      .to(
-        '[data-selector="footer-two"]',
-        {
-          rotateX: "180deg",
-          zIndex: 3,
+    if (router.pathname === "/") {
+      const aboutTl = gsap.timeline();
+
+      aboutTl
+        .to('[data-selector="footer-one"]', {
+          rotateX: 0,
+          ease: "power3",
           duration: 1,
-        },
-        "-=1.1"
-      )
-      .to(
-        '[ data-selector="about"]',
-        {
-          y: "100%",
-          ease: "power3.inOut",
+          pointerEvents: "all",
+          width: "12rem",
+        })
+        .to(
+          '[data-selector="footer-two"]',
+          {
+            rotateX: "180deg",
+            zIndex: 3,
+            duration: 1,
+            width: "12rem",
+          },
+          "-=1.1"
+        )
+        .to(
+          '[ data-selector="about"]',
+          {
+            y: "100%",
+            ease: "power3.inOut",
+            duration: 1,
+          },
+          "-=1.3"
+        )
+        .to('[data-selector="footer-one"] button', {
+          pointerEvents: "all",
+        });
+    } else {
+      const projectTl = gsap.timeline();
+      projectTl
+        .to('[data-selector="footer-one"]', {
+          rotateX: 0,
+          ease: "power3",
           duration: 1,
-        },
-        "-=1.3"
-      )
-      .to('[data-selector="footer-one"] button', {
-        pointerEvents: "all",
-      });
+          pointerEvents: "all",
+          width: "12rem",
+        })
+        .to(
+          '[data-selector="footer-two"]',
+          {
+            rotateX: "180deg",
+            zIndex: 3,
+            duration: 1,
+            width: "12rem",
+          },
+          "-=1.1"
+        )
+
+        .to(
+          "[data-selector='project'] img",
+          {
+            x: "100%",
+            duration: 0.8,
+            ease: "power3",
+          },
+          "-=1"
+        )
+
+        .to(
+          "[data-selector='projects']",
+          {
+            opacity: 1,
+            duration: 1,
+            ease: "power3",
+          },
+          "-=1"
+        );
+    }
   };
 
   const hoverInAbt = () => {
@@ -96,21 +141,33 @@ const Footer = () => {
     <>
       <footer className={c.footer} data-selector="footer-one">
         <div className={c.footer_inner}>
-          <button
-            onClick={() => openAbt()}
-            onMouseOver={(e) => {
-              hoverLink(e);
-              hoverInAbt();
-            }}
-            onMouseOut={(e) => {
-              hoverLinkOut(e);
-              displayAbtTl.reverse();
-            }}
-          >
-            About
-            <div></div>
-          </button>
+          {router.pathname === "/" ? (
+            <button
+              onClick={() => openAbt()}
+              onMouseOver={(e) => {
+                hoverLink(e);
+                hoverInAbt();
+              }}
+              onMouseOut={(e) => {
+                hoverLinkOut(e);
+                displayAbtTl.reverse();
+              }}
+            >
+              About
+              <div></div>
+            </button>
+          ) : (
+            <Link
+              href="/"
+              onMouseOver={(e) => hoverLink(e)}
+              onMouseOut={(e) => hoverLinkOut(e)}
+            >
+              Home
+              <div></div>
+            </Link>
+          )}
           <Link
+            className={router.pathname === "/projects" ? c.active : ""}
             href="/projects"
             onMouseOver={(e) => hoverLink(e)}
             onMouseOut={(e) => hoverLinkOut(e)}

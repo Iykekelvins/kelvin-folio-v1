@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 
 import Footer from "@/shared/Footer";
 import About from "@/components/About";
+import Project from "@/shared/Project";
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -26,7 +27,8 @@ const Layout = ({ children }) => {
   return (
     <main>
       {children}
-      <About />
+      {router.pathname !== "/projects" && <About />}
+      {router.pathname === "/projects" && <Project />}
       <Footer />
     </main>
   );

@@ -87,7 +87,7 @@ const Footer = () => {
     displayAbtTl.to('[ data-selector="about"]', {
       y: "90%",
       ease: "power3",
-      duration: 0.5,
+      duration: 0.8,
     });
     displayAbtTl.play();
   };

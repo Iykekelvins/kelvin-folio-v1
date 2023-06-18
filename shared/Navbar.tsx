@@ -17,7 +17,9 @@ const Navbar = () => {
       </Link>
       <div className={c.navbar_right}>
         <a
-          href=""
+          href="mailto:kelvinochubili@gmail.com"
+          target="_blank"
+          rel="noreferrer"
           onMouseOver={(e) => hoverLink(e)}
           onMouseOut={(e) => hoverLinkOut(e)}
         >
@@ -26,7 +28,9 @@ const Navbar = () => {
         </a>
         <span>— </span>
         <a
-          href=""
+          href="https://twitter.com/iykekelvins"
+          target="_blank"
+          rel="noreferrer"
           onMouseOver={(e) => hoverLink(e)}
           onMouseOut={(e) => hoverLinkOut(e)}
         >
@@ -35,7 +39,9 @@ const Navbar = () => {
         </a>
         <span>— </span>
         <a
-          href=""
+          href="https://instagram.com/iykekelvins"
+          target="_blank"
+          rel="noreferrer"
           onMouseOver={(e) => hoverLink(e)}
           onMouseOut={(e) => hoverLinkOut(e)}
         >

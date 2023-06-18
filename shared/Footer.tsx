@@ -71,10 +71,10 @@ const Footer = () => {
         '[ data-selector="about"]',
         {
           y: "100%",
-          ease: "power3",
+          ease: "power3.inOut",
           duration: 1,
         },
-        "-=1.2"
+        "-=1.3"
       )
       .to('[data-selector="footer-one"] button', {
         pointerEvents: "all",

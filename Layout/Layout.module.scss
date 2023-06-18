@@ -11,6 +11,19 @@
     color: inherit;
     font-size: 1.125rem;
     text-transform: uppercase;
+    transition: all 0.3s linear;
+    position: relative;
+    div {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #f3f3f3;
+    }
+    &:hover {
+      color: #fff;
+    }
   }
   &_right {
     @extend .flex-ac;

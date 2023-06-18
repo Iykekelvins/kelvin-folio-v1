@@ -15,6 +15,9 @@ const About = () => {
           height={643}
         />
         <h2>about:blank™</h2>
+        <h2>
+          about: <br /> blank™
+        </h2>
       </div>
       <div className={c.about_info}>
         <div className={c.about_info_left}>

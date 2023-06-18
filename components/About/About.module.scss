@@ -9,28 +9,59 @@
   width: 100vw;
   height: 100vh;
   overflow: auto;
-  padding: 2.5rem;
+  padding: 2.5rem 2.5rem 8rem;
   transform: translateY(100%);
   &::-webkit-scrollbar {
-    width: 5px;
+    display: none;
   }
 
-  &::-webkit-scrollbar-thumb {
-    background: #f3f3f3;
-    border-radius: 8px;
+  // &::-webkit-scrollbar-thumb {
+  //   background: #f3f3f3;
+  //   border-radius: 8px;
+  // }
+  @include respondMax("tablet3x") {
+    padding-top: 0;
   }
   &_hero {
     @extend .flex-ac-jc;
     flex-direction: column;
     height: 70vh;
+    position: relative;
     img {
       object-fit: cover;
       height: 100%;
       width: 60vw;
+      @include respondMax("tablet3x") {
+        width: 100vw;
+      }
     }
     h2 {
-      font-family: "Neue Haas Grotesk Display Pro";
-      margin-top: -4rem;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 7.75rem;
+      font-weight: 400;
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      line-height: 1;
+      &:last-child {
+        display: none;
+      }
+      @include respondMax("tablet3x") {
+        display: none;
+        bottom: -7.5rem;
+        &:last-child {
+          display: block;
+        }
+      }
+      @media (max-width: 600px) {
+        font-size: 5.75rem;
+        bottom: -5.5rem;
+      }
+      @media (max-width: 360px) {
+        font-size: 3.75rem;
+        bottom: -3.5rem;
+      }
     }
   }
   &_info {
@@ -38,6 +69,10 @@
     display: flex;
     justify-content: space-between;
     gap: 7.5rem;
+    @include respondMax("tablet3x") {
+      flex-direction: column;
+      gap: 4.5rem;
+    }
     &_left {
       p {
         font-size: 2rem;
@@ -55,6 +90,10 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 5rem;
       margin-top: 1.25rem;
+      @include respondMax("tablet3x") {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+      }
       .section {
         h4 {
           font-weight: 400;

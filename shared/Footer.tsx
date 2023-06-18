@@ -36,8 +36,9 @@ const Footer = () => {
         {
           rotateX: 0,
           zIndex: 4,
+          duration: 1,
         },
-        "-=1"
+        "-=1.2"
       );
   };
 
@@ -55,6 +56,7 @@ const Footer = () => {
         {
           rotateX: "180deg",
           zIndex: 3,
+          duration: 1,
         },
         "-=1"
       )
@@ -65,7 +67,7 @@ const Footer = () => {
           ease: "power3",
           duration: 1,
         },
-        "-=1"
+        "-=1.2"
       );
   };
 
@@ -92,7 +94,7 @@ const Footer = () => {
             }}
             onMouseOut={(e) => {
               hoverLinkOut(e);
-              displayAbtTl.reverse();
+              // displayAbtTl.reverse();
             }}
           >
             About

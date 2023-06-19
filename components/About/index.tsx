@@ -3,17 +3,44 @@ import { hoverLink, hoverLinkOut } from "@/animations";
 import Image from "next/image";
 
 import c from "./About.module.scss";
+import { useEffect } from "react";
+import { gsap } from "gsap";
 
 const About = () => {
+  // const t = document.querySelector('[data-selector="about-cover"]');
+  // console.log(t);
+
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     t?.querySelector("img"),
+  //     {
+  //       y: 85,
+  //     },
+  //     {
+  //       y: 0,
+  //       scrollTrigger: {
+  //         trigger: document.querySelector('[data-selector="about-cover"]'),
+  //         start: "top bottom",
+  //         // end: works.length - i === 1 ? "-=500" : "+=1000",
+  //         end: "top top",
+  //         scrub: true,
+  //         // markers: true,
+  //       },
+  //     }
+  //   );
+  // }, []);
+
   return (
     <div className={c.about} data-selector="about">
-      <div className={c.about_hero}>
+      <div className={c.about_hero} data-selector="about-cover">
+        {/* <div className={c.about_hero_cover}> */}
         <Image
           src="/bg-img-2.png"
           alt="background image"
           width={968}
           height={643}
         />
+        {/* </div> */}
         <h2>about:blank™</h2>
         <h2>
           about: <br /> blank™
@@ -41,15 +68,15 @@ const About = () => {
             <ul className={c.exp}>
               <li>
                 <span>Frontend Developer Intern</span>
-                <span>BITPILER, Jan &apos;22 - Apr &apos;22</span>
+                <span>MAINSTACK, Jan &apos;22 - Apr &apos;22</span>
               </li>
               <li>
                 <span>Frontend Developer Intern</span>
-                <span>BITPILER, Jan &apos;22 - Apr &apos;22</span>
+                <span>AYATRADES, Jun &apos;22 - Sep &apos;22</span>
               </li>
               <li>
-                <span>Frontend Developer Intern</span>
-                <span>BITPILER, Jan &apos;22 - Apr &apos;22</span>
+                <span>Freelance Frontend Developer</span>
+                <span>SUNBEAM STUDIO</span>
               </li>
             </ul>
           </div>
@@ -59,10 +86,11 @@ const About = () => {
               <li>HTML</li>
               <li>SCSS</li>
               <li>JAVASCRIPT</li>
+              <li>TYPESCRIPT</li>
               <li>REACTJS</li>
               <li>NEXTJS</li>
               <li>GIT & GITHUB</li>
-              {/* <li></li> */}
+              <li>GSAP, FRAMER MOTION.</li>
             </ul>
           </div>
           <div className={c.section}>

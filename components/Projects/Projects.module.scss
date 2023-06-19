@@ -38,6 +38,14 @@
       font-family: "Switzer", sans-serif;
       font-size: 1.125rem;
       cursor: pointer;
+      &:first-child {
+        left: 2.5rem;
+        top: 28.625rem;
+      }
+      &:nth-child(2) {
+        left: 16rem;
+        top: 9.375rem;
+      }
     }
   }
 }
@@ -56,16 +64,44 @@
     height: 100%;
     object-fit: cover;
     transform: translateX(100%);
+    position: absolute;
+    right: 0;
   }
   &_info {
-    // position: absolute;
-    left: 16rem;
+    margin-top: 9.375rem;
+    margin-left: 16.25rem;
+    overflow: hidden;
+    a,
     h4,
     p {
       font-family: "Switzer", sans-serif;
+      font-weight: 400;
+      transform: translateX(-100%);
+    }
+    h4 {
+      text-decoration: underline;
     }
     p {
       font-size: 0.875rem;
+      margin-top: 1rem;
+      max-width: 12rem;
+    }
+    a {
+      @extend .flex-ac;
+      pointer-events: all;
+      color: inherit;
+      margin-top: 1rem;
+      span {
+        position: relative;
+        div {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 1px;
+          background: #f3f3f3;
+        }
+      }
     }
   }
 }

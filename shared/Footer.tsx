@@ -103,15 +103,29 @@ const Footer = () => {
           },
           "-=1.1"
         )
+        .to(
+          [
+            "[data-selector='project'] div h4",
+            "[data-selector='project'] div p",
+            "[data-selector='project'] div a",
+          ],
+          {
+            x: "-100%",
+            duration: 0.8,
+            ease: "power3.inOut",
+            stagger: -0.05,
+          },
+          "-=1"
+        )
 
         .to(
           "[data-selector='project'] img",
           {
             x: "100%",
             duration: 0.8,
-            ease: "power3",
+            ease: "power3.inOut",
           },
-          "-=1"
+          "-=0.9"
         )
 
         .to(

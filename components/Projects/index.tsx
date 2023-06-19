@@ -43,6 +43,20 @@ const Projects = () => {
         "-=1.2"
       )
       .to(
+        [
+          "[data-selector='project'] div h4",
+          "[data-selector='project'] div p",
+          "[data-selector='project'] div a",
+        ],
+        {
+          x: 0,
+          duration: 0.8,
+          ease: "power3",
+          stagger: 0.05,
+        },
+        "-=1"
+      )
+      .to(
         "[data-selector='project'] img",
         {
           x: 0,
@@ -65,7 +79,7 @@ const Projects = () => {
         <div></div>
         <div></div>
       </div>
-      <h1 className="title">
+      <h1>
         {[...text].map((c, i) => (
           <span key={i}>{c}</span>
         ))}

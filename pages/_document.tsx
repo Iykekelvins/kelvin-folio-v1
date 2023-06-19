@@ -35,7 +35,7 @@ export default function Document() {
         <meta property="og:url" content="https://Kelvin Ochubili.vercel.app/" />
 
         {/* <link rel="manifest" href="/manifest.json" /> */}
-        <link href="/favicon.svg" rel="icon" type="image/svg" sizes="16x16" />
+        <link href="/jardani-3.jpg" rel="icon" type="image/jpg" sizes="16x16" />
         <link rel="apple-touch-icon" href="/icon-16.png"></link>
         <meta name="theme-color" content="#1b1464" />
         <link

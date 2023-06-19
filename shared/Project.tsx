@@ -24,12 +24,17 @@ const Project = () => {
           ↗
         </a>
       </div>
-      <Image
-        alt=""
-        src={ctx.currProject?.img || "/jemima.png"}
-        width={868}
-        height={1304}
-      />
+      <div className={c.project_imgs} data-selector="project-imgs">
+        {ctx.currProject?.imgs?.map((img) => (
+          <Image
+            alt="project image"
+            key={img}
+            src={!img ? "/beverly.png" : img}
+            width={868}
+            height={1304}
+          />
+        ))}
+      </div>
     </div>
   );
 };

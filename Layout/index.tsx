@@ -1,11 +1,14 @@
 import { useRouter } from "next/router";
+import { useContext } from "react";
 
+import AppContext from "@/context/AppContext";
 import Footer from "@/shared/Footer";
 import About from "@/components/About";
 import Project from "@/shared/Project";
 
 const Layout = ({ children }) => {
   const router = useRouter();
+  const ctx = useContext<any>(AppContext);
 
   // page transition on navigation buttons click event
   // useEffect(() => {
@@ -28,7 +31,7 @@ const Layout = ({ children }) => {
     <main>
       {children}
       {router.pathname !== "/projects" && <About />}
-      {router.pathname === "/projects" && <Project />}
+      {<Project />}
       <Footer />
     </main>
   );

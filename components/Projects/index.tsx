@@ -11,9 +11,9 @@ const Projects = () => {
   const text: any = "Featured Projects";
 
   const openProject = (pjt) => {
-    ctx.setCurrProject(pjt);
-
     const projectTl = gsap.timeline();
+
+    ctx.setCurrProject(pjt);
 
     projectTl
       .to("[data-selector='projects']", {
@@ -56,14 +56,25 @@ const Projects = () => {
         },
         "-=1"
       )
-      .to(
-        "[data-selector='project'] img",
+      .fromTo(
+        "[data-selector='project-imgs'] ",
+        {
+          x: "100%",
+        },
         {
           x: 0,
           duration: 0.8,
           ease: "power3",
+          stagger: 0.05,
         },
         "-=1"
+      )
+      .to(
+        "[data-selector='project']",
+        {
+          pointerEvents: "all",
+        },
+        "-=3"
       );
   };
 

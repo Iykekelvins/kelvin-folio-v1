@@ -86,23 +86,6 @@ const Footer = () => {
     } else {
       const projectTl = gsap.timeline();
       projectTl
-        .to('[data-selector="footer-one"]', {
-          rotateX: 0,
-          ease: "power3",
-          duration: 1,
-          pointerEvents: "all",
-          width: "12rem",
-        })
-        .to(
-          '[data-selector="footer-two"]',
-          {
-            rotateX: "180deg",
-            zIndex: 3,
-            duration: 1,
-            width: "12rem",
-          },
-          "-=1.1"
-        )
         .to(
           [
             "[data-selector='project'] div h4",
@@ -114,18 +97,41 @@ const Footer = () => {
             duration: 0.8,
             ease: "power3.inOut",
             stagger: -0.05,
+          }
+          // "-=1"
+        )
+
+        .to(
+          "[data-selector='project-imgs'] ",
+          {
+            x: "100%",
+            duration: 0.8,
+            ease: "power3.inOut",
+            stagger: 0.05,
           },
           "-=1"
         )
 
         .to(
-          "[data-selector='project'] img",
+          '[data-selector="footer-one"]',
           {
-            x: "100%",
-            duration: 0.8,
-            ease: "power3.inOut",
+            rotateX: 0,
+            ease: "power3",
+            duration: 1,
+            pointerEvents: "all",
+            width: "12rem",
           },
-          "-=0.9"
+          "-=0.8"
+        )
+        .to(
+          '[data-selector="footer-two"]',
+          {
+            rotateX: "180deg",
+            zIndex: 3,
+            duration: 1,
+            width: "12rem",
+          },
+          "-=1.1"
         )
 
         .to(
@@ -136,6 +142,13 @@ const Footer = () => {
             ease: "power3",
           },
           "-=1"
+        )
+        .to(
+          "[data-selector='project']",
+          {
+            pointerEvents: "none",
+          },
+          "-=3"
         );
     }
   };

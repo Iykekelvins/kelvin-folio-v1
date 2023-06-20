@@ -18,4 +18,16 @@ export const projects = [
     type: "Creative Development",
     imgs: ["/beverly-1.png", "/beverly-2.png", "/beverly-3.png"],
   },
+  {
+    title: "HooBank",
+    info: "A Landing page design for fictional company, HooBank.",
+    url: "https://hoobank-iykekelvins.vercel.app/",
+    type: "Web Exploration",
+    imgs: [
+      "/hoobank-1.png",
+      "/hoobank-2.png",
+      "/hoobank-3.png",
+      "/hoobank-4.png",
+    ],
+  },
 ];

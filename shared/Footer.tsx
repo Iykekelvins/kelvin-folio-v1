@@ -89,6 +89,7 @@ const Footer = () => {
         .to(
           [
             "[data-selector='project'] div h4",
+            "[data-selector='project'] div .type",
             "[data-selector='project'] div p",
             "[data-selector='project'] div a",
           ],

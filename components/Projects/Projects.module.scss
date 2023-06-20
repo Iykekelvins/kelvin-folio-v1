@@ -50,7 +50,84 @@
         left: 16rem;
         top: 9.375rem;
       }
+      h4 {
+        font-family: "Switzer", sans-serif;
+        font-weight: 400;
+        text-decoration: underline;
+      }
+      & > span {
+        font-style: italic;
+        font-size: 0.875rem;
+        font-family: "Switzer", sans-serif;
+      }
+      a,
+      p {
+        display: none;
+        font-family: "Switzer", sans-serif;
+        font-weight: 400;
+      }
     }
+  }
+  @include respondMax("tablet3x") {
+    min-height: unset;
+    flex-direction: column;
+    align-items: unset;
+    padding-bottom: 8rem;
+    &_bg {
+      display: none;
+    }
+    ul {
+      margin-top: 2rem;
+      margin-left: -1rem;
+      margin-right: -1rem;
+      li {
+        position: unset;
+        padding: 1rem;
+        cursor: unset;
+        border-bottom: 1px solid rgba(105, 105, 105, 0.5);
+        &:first-child {
+          border-top: 1px solid rgba(105, 105, 105, 0.5);
+        }
+        a,
+        h4,
+        p {
+          display: block;
+        }
+        p {
+          font-size: 0.875rem;
+          margin-top: 1rem;
+        }
+        a {
+          display: flex;
+          align-items: center;
+          pointer-events: all;
+          color: inherit;
+          margin-top: 0.5rem;
+          span {
+            position: relative;
+            div {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0;
+              height: 1px;
+              background: #f3f3f3;
+            }
+          }
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    h1 {
+      text-align: center;
+      font-size: 15.25vw;
+    }
+  }
+  @include respondMax("mobile2x") {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -70,6 +147,7 @@
   @include respondMax("tablet3x") {
     display: none;
   }
+
   img {
     width: 60vw;
     height: 100vh;
@@ -81,6 +159,14 @@
     position: sticky;
     top: 9.375rem;
     left: 16.25rem;
+    & > span {
+      font-style: italic;
+      font-size: 0.875rem;
+    }
+    .type {
+      display: block;
+      transform: translateX(-100%);
+    }
     a,
     h4,
     p {
@@ -90,6 +176,7 @@
     }
     h4 {
       text-decoration: underline;
+      margin-bottom: 0.25rem;
     }
     p {
       font-size: 0.875rem;

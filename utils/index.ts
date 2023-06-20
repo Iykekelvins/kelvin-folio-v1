@@ -3,6 +3,7 @@ export const projects = [
     title: "Bitpiler",
     info: "A tech company that offers web services.",
     url: "https://bitpiler.vercel.app",
+    type: "Creative Development",
     imgs: [
       "/bitpiler-1.png",
       "/bitpiler-2.png",
@@ -14,6 +15,7 @@ export const projects = [
     title: "Beverly Naya",
     info: "A fansite for a Nigerian celebrity that speaks about her movies and her past achievements.",
     url: "https://beverly-naya.vercel.app",
+    type: "Creative Development",
     imgs: ["/beverly-1.png", "/beverly-2.png", "/beverly-3.png"],
   },
 ];

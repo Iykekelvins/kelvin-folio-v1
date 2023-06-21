@@ -66,3 +66,7 @@ ul {
 input {
   font-family: inherit;
 }
+.char {
+  transform: rotateY(-180deg);
+  display: inline-block;
+}

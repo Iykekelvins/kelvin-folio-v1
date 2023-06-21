@@ -6,7 +6,7 @@ import c from "../Layout/Layout.module.scss";
 
 const Navbar = () => {
   return (
-    <nav className={c.navbar}>
+    <nav className={c.navbar} data-selector="navbar">
       <Link
         href="/"
         onMouseOver={(e) => hoverLink(e)}

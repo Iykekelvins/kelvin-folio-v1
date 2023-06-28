@@ -64,6 +64,8 @@ const Home = () => {
         <Image
           src="/bg-img.png"
           alt="background image"
+          loading="eager"
+          priority
           height={836}
           width={1376}
           className={c.home_bg}

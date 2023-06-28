@@ -16,7 +16,12 @@ export const projects = [
     info: "A fansite for a Nigerian celebrity that speaks about her movies and her past achievements.",
     url: "https://beverly-naya.vercel.app",
     type: "Creative Development",
-    imgs: ["/beverly-1.png", "/beverly-2.png", "/beverly-3.png"],
+    imgs: [
+      "/beverly-1.png",
+      "/beverly-2.png",
+      "/beverly-3.png",
+      "/beverly-4.png",
+    ],
   },
   {
     title: "HooBank",

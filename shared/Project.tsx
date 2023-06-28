@@ -29,8 +29,9 @@ const Project = () => {
         {ctx.currProject?.imgs?.map((img) => (
           <Image
             alt="project image"
+            loading="eager"
             key={img}
-            src={!img ? "/beverly.png" : img}
+            src={img}
             width={868}
             height={1304}
           />

@@ -3,8 +3,6 @@ import { hoverLink, hoverLinkOut } from "@/animations";
 import Image from "next/image";
 
 import c from "./About.module.scss";
-import { useEffect } from "react";
-import { gsap } from "gsap";
 
 const About = () => {
   // const t = document.querySelector('[data-selector="about-cover"]');
@@ -37,6 +35,7 @@ const About = () => {
         <Image
           src="/bg-img-2.png"
           alt="background image"
+          loading="eager"
           width={968}
           height={643}
         />

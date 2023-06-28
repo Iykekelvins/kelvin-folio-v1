@@ -30,6 +30,7 @@ const Project = () => {
           <Image
             alt="project image"
             loading="eager"
+            priority
             key={img}
             src={img}
             width={868}

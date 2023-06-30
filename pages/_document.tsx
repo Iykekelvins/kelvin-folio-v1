@@ -17,7 +17,7 @@ export default function Document() {
         <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:url"
-          content="https://Kelvin Ochubili.vercel.app/"
+          content="https://kelvin-folio-v1.vercel.app/"
         />
         <meta name="twitter:title" content="Kelvin Ochubili" />
         <meta
@@ -32,7 +32,7 @@ export default function Document() {
           content="Kelvin Ochubili - Frontend Developer"
         />
         <meta property="og:site_name" content="Kelvin Ochubili" />
-        <meta property="og:url" content="https://Kelvin Ochubili.vercel.app/" />
+        <meta property="og:url" content="https://kelvin-folio-v1.vercel.app/" />
 
         {/* <link rel="manifest" href="/manifest.json" /> */}
         <link href="/jardani-3.jpg" rel="icon" type="image/jpg" sizes="16x16" />

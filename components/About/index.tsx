@@ -48,8 +48,8 @@ const About = () => {
       <div className={c.about_info}>
         <div className={c.about_info_left}>
           <p>
-            I am Kelvin Ochubili, a developer based in Lagos, Nigeria. I love
-            having fun with the web, creating things that is good for the eyes
+            I am Kelvin Ochubili, A developer based in Lagos, Nigeria. I love
+            having fun with the web, creating things that are good for the eyes
             to see, and to use.
           </p>
           <p>

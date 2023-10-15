@@ -54,6 +54,10 @@
         left: 29.75rem;
         bottom: 9.375rem;
       }
+      &:nth-child(4) {
+        left: 29.75rem;
+        top: 15rem;
+      }
       h4 {
         font-family: "Switzer", sans-serif;
         font-weight: 400;
@@ -125,8 +129,10 @@
       }
     }
     h1 {
+      font-size: 15vw;
+      display: flex;
+      justify-content: space-between;
       text-align: center;
-      font-size: 15.25vw;
     }
   }
   @include respondMax("mobile2x") {

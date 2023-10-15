@@ -69,10 +69,9 @@ const Projects = () => {
           {
             x: 0,
             duration: 0.8,
-            ease: "power3",
-            stagger: 0.05,
+            ease: "power3.out",
           },
-          "-=1"
+          "-=0.85"
         )
         .to(
           "[data-selector='project']",

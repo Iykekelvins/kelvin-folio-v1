@@ -35,4 +35,11 @@ export const projects = [
       "/hoobank-4.png",
     ],
   },
+  {
+    title: "Opay web",
+    info: "A Landing page redesign for  Nigerian fintech company, Opay.",
+    url: "https://opay-web.vercel.app/",
+    type: "Web Exploration",
+    imgs: ["/opay-1.png", "/opay-2.png", "/opay-3.png", "/opay-4.png"],
+  },
 ];

@@ -24,6 +24,27 @@ export const projects = [
     ],
   },
   {
+    title: "Maxwell",
+    info: "Portfolio development for Maxwell, A Frontend Developer.",
+    url: "https://maxwell-folio.vercel.app/",
+    type: "Web Exploration",
+    imgs: [
+      "/maxwell-1.png",
+      "/maxwell-2.png",
+      "/maxwell-3.png",
+      "/maxwell-4.png",
+    ],
+  },
+
+  {
+    title: "Opay web",
+    info: "A Landing page redesign for  Nigerian fintech company, Opay.",
+    url: "https://opay-web.vercel.app/",
+    type: "Web Exploration",
+    imgs: ["/opay-1.png", "/opay-2.png", "/opay-3.png", "/opay-4.png"],
+  },
+
+  {
     title: "HooBank",
     info: "A Landing page design for fictional company, HooBank.",
     url: "https://hoobank-iykekelvins.vercel.app/",
@@ -33,25 +54,6 @@ export const projects = [
       "/hoobank-2.png",
       "/hoobank-3.png",
       "/hoobank-4.png",
-    ],
-  },
-  {
-    title: "Opay web",
-    info: "A Landing page redesign for  Nigerian fintech company, Opay.",
-    url: "https://opay-web.vercel.app/",
-    type: "Web Exploration",
-    imgs: ["/opay-1.png", "/opay-2.png", "/opay-3.png", "/opay-4.png"],
-  },
-  {
-    title: "Maxwell",
-    info: "Portfolio development for Maxwell, A Frontend Developer",
-    url: "https://maxwell-folio.vercel.app/",
-    type: "Web Exploration",
-    imgs: [
-      "/maxwell-1.png",
-      "/maxwell-2.png",
-      "/maxwell-3.png",
-      "/maxwell-4.png",
     ],
   },
 ];

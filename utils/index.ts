@@ -42,4 +42,16 @@ export const projects = [
     type: "Web Exploration",
     imgs: ["/opay-1.png", "/opay-2.png", "/opay-3.png", "/opay-4.png"],
   },
+  {
+    title: "Maxwell",
+    info: "Portfolio development for Maxwell, A Frontend Developer",
+    url: "https://maxwell-folio.vercel.app/",
+    type: "Web Exploration",
+    imgs: [
+      "/maxwell-1.png",
+      "/maxwell-2.png",
+      "/maxwell-3.png",
+      "/maxwell-4.png",
+    ],
+  },
 ];

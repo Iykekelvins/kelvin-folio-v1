@@ -44,7 +44,7 @@
       }
       &:first-child {
         left: 2.5rem;
-        top: 28.625rem;
+        top: 22.625rem;
       }
       &:nth-child(2) {
         left: 16rem;
@@ -52,11 +52,15 @@
       }
       &:nth-child(3) {
         left: 29.75rem;
-        bottom: 9.375rem;
+        bottom: 12.375rem;
       }
       &:nth-child(4) {
         left: 29.75rem;
         top: 15rem;
+      }
+      &:nth-child(5) {
+        left: 16rem;
+        bottom: 7rem;
       }
       h4 {
         font-family: "Switzer", sans-serif;

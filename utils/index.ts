@@ -26,11 +26,11 @@ export const projects = [
 		imgs: ['/beverly-1.png', '/beverly-2.png', '/beverly-3.png', '/beverly-4.png'],
 	},
 	{
-		title: 'Maxwell',
-		info: 'Portfolio development for Maxwell, A Frontend Developer.',
+		title: 'Access Insurance',
+		info: 'Multipage website for Access Insurance company showcasing their services and company overall.',
 		url: 'https://maxwell-folio.vercel.app/',
 		type: 'Web Exploration',
-		imgs: ['/maxwell-1.png', '/maxwell-2.png', '/maxwell-3.png', '/maxwell-4.png'],
+		imgs: ['/access-1.png', '/access-2.png', '/access-3.png', '/access-4.png'],
 	},
 
 	{
@@ -42,10 +42,10 @@ export const projects = [
 	},
 
 	{
-		title: 'HooBank',
-		info: 'A Landing page design for fictional company, HooBank.',
-		url: 'https://hoobank-iykekelvins.vercel.app/',
+		title: 'Maxwell',
+		info: 'Portfolio development for Maxwell, A Frontend Developer.',
+		url: 'https://maxwell-folio.vercel.app/',
 		type: 'Web Exploration',
-		imgs: ['/hoobank-1.png', '/hoobank-2.png', '/hoobank-3.png', '/hoobank-4.png'],
+		imgs: ['/maxwell-1.png', '/maxwell-2.png', '/maxwell-3.png', '/maxwell-4.png'],
 	},
 ]

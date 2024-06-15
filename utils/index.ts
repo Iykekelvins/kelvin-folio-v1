@@ -12,6 +12,13 @@ export const projects = [
 		],
 	},
 	{
+		title: 'Dev Links',
+		info: 'A link sharing app built for creators to have all their social links displayed on one platform. It was built with Supabase for database management.',
+		url: 'https://devlink-share.vercel.app/',
+		type: 'Web Development',
+		imgs: ['/devlinks-1.png', '/devlinks-2.png', '/devlinks-3.png', '/devlinks-4.png'],
+	},
+	{
 		title: 'Beverly Naya',
 		info: 'A fansite for a Nigerian celebrity that speaks about her movies and her past achievements.',
 		url: 'https://beverly-naya.vercel.app',

@@ -28,7 +28,7 @@ export const projects = [
 	{
 		title: 'Access Insurance',
 		info: 'Multipage website for Access Insurance company showcasing their services and company overall.',
-		url: 'https://maxwell-folio.vercel.app/',
+		url: 'https://access-insurance-one.vercel.app/',
 		type: 'Web Exploration',
 		imgs: ['/access-1.png', '/access-2.png', '/access-3.png', '/access-4.png'],
 	},

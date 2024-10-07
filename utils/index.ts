@@ -1,7 +1,14 @@
 export const projects = [
 	{
+		title: 'Synctec',
+		info: 'Synctec is an online community where gamers can connect, compete, and collaborate to dominate the gaming world.',
+		url: 'https://synctecapp.com/',
+		type: 'Creative Development',
+		imgs: ['/synctec-1.png', '/synctec-2.png', '/synctec-3.png', '/synctec-4.png'],
+	},
+	{
 		title: 'Audiophile E-commerce',
-		info: 'An E-commerce website selling audio gadgets.',
+		info: 'Immerse yourself in sound with Audiophile. Discover a curated collection of high-quality audio devices designed to bring your favorite music to life.',
 		url: 'https://audiophile-ecommerce-iykekelvins.vercel.app/',
 		type: 'Web Exploration',
 		imgs: [
@@ -16,7 +23,12 @@ export const projects = [
 		info: 'A link sharing app built for creators to have all their social links displayed on one platform. It was built with Supabase for database management.',
 		url: 'https://devlink-share.vercel.app/',
 		type: 'Web Development',
-		imgs: ['/devlinks-1.png', '/devlinks-2.png', '/devlinks-3.png', '/devlinks-4.png'],
+		imgs: [
+			'/devlinks-1.png',
+			'/devlinks-2.png',
+			'/devlinks-3.png',
+			'/devlinks-4.png',
+		],
 	},
 	{
 		title: 'Beverly Naya',
@@ -29,7 +41,7 @@ export const projects = [
 		title: 'Access Insurance',
 		info: 'Multipage website for Access Insurance company showcasing their services and company overall.',
 		url: 'https://access-insurance-one.vercel.app/',
-		type: 'Web Exploration',
+		type: 'Creative Development',
 		imgs: ['/access-1.png', '/access-2.png', '/access-3.png', '/access-4.png'],
 	},
 
@@ -48,4 +60,4 @@ export const projects = [
 		type: 'Web Exploration',
 		imgs: ['/maxwell-1.png', '/maxwell-2.png', '/maxwell-3.png', '/maxwell-4.png'],
 	},
-]
+];

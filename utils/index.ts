@@ -2,7 +2,7 @@ export const projects = [
 	{
 		title: 'Synctec',
 		info: 'Synctec is an online community where gamers can connect, compete, and collaborate to dominate the gaming world.',
-		url: 'https://synctecapp.com/',
+		url: 'https://www.synctecapp.com/',
 		type: 'Creative Development',
 		imgs: ['/synctec-1.png', '/synctec-2.png', '/synctec-3.png', '/synctec-4.png'],
 	},
@@ -44,15 +44,6 @@ export const projects = [
 		type: 'Creative Development',
 		imgs: ['/access-1.png', '/access-2.png', '/access-3.png', '/access-4.png'],
 	},
-
-	{
-		title: 'Opay web',
-		info: 'A Landing page redesign for  Nigerian fintech company, Opay.',
-		url: 'https://opay-web.vercel.app/',
-		type: 'Web Exploration',
-		imgs: ['/opay-1.png', '/opay-2.png', '/opay-3.png', '/opay-4.png'],
-	},
-
 	{
 		title: 'Maxwell',
 		info: 'Portfolio development for Maxwell, A Frontend Developer.',
